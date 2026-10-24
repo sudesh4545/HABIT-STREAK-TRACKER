@@ -1,0 +1,221 @@
+:root {
+        color-scheme: dark;
+        --bg: #090d18;
+        --panel: #151c30ef;
+        --line: #b9c8ff24;
+        --text: #f8f9ff;
+        --muted: #9ba7bd;
+        --a: #a78bfa;
+        --b: #38bdf8;
+        --c: #f472b6;
+        font-family: Inter, system-ui, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-width: 320px;
+        min-height: 100vh;
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at 10% 0,
+            color-mix(in srgb, var(--a) 30%, transparent),
+            transparent 35%
+          ),
+          radial-gradient(
+            circle at 95% 85%,
+            color-mix(in srgb, var(--b) 23%, transparent),
+            transparent 32%
+          ),
+          var(--bg);
+      }
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+      .shell {
+        width: min(1120px, calc(100% - 24px));
+        margin: auto;
+        padding: 24px 0;
+      }
+      .top,
+      .row,
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        text-decoration: none;
+      }
+      .logo {
+        width: 43px;
+        height: 43px;
+        display: grid;
+        place-items: center;
+        border-radius: 13px;
+        background: linear-gradient(135deg, var(--a), var(--c));
+        font-weight: 900;
+      }
+      .brand small {
+        display: block;
+        color: var(--muted);
+        font-size: 9px;
+        letter-spacing: 0.2em;
+      }
+      .hero {
+        margin: 48px 0 25px;
+      }
+      .eyebrow {
+        font-size: 10px;
+        color: var(--b);
+        letter-spacing: 0.2em;
+        font-weight: 800;
+      }
+      .hero h1 {
+        font-size: clamp(42px, 7vw, 72px);
+        line-height: 0.92;
+        letter-spacing: -0.06em;
+        margin: 9px 0;
+      }
+      .hero p {
+        color: var(--muted);
+        max-width: 650px;
+      }
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 21px;
+        padding: 20px;
+        background: linear-gradient(145deg, #18213aef, #0b1120ef);
+        box-shadow: 0 24px 65px #0007;
+      }
+      .grid2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 13px;
+      }
+      .field {
+        display: grid;
+        gap: 6px;
+        margin: 10px 0;
+      }
+      .hint {
+        font-size: 10px;
+        color: var(--muted);
+      }
+      input,
+      select,
+      textarea {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #090f1d;
+        color: #fff;
+        padding: 10px;
+        outline: none;
+      }
+      button {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #11192c;
+        color: #fff;
+        padding: 9px 13px;
+        cursor: pointer;
+      }
+      .primary {
+        border: 0;
+        background: linear-gradient(110deg, var(--a), var(--c));
+        font-weight: 800;
+      }
+      .status {
+        min-height: 17px;
+        color: var(--b);
+        font-size: 10px;
+      }
+      @media (max-width: 720px) {
+        .grid2 {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          margin-top: 38px;
+        }
+      }
+      @media (max-width: 430px) {
+        .shell {
+          width: calc(100% - 16px);
+        }
+        .panel {
+          padding: 15px;
+        }
+      }
+      .add {
+        display: grid;
+        grid-template-columns: 2fr 1fr auto;
+        gap: 8px;
+      }
+      .habits {
+        display: grid;
+        gap: 9px;
+        margin-top: 13px;
+      }
+      .habit {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        align-items: center;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        background: #0a1020;
+      }
+      .habit h3 {
+        margin: 0;
+      }
+      .habit p {
+        margin: 5px 0 0;
+        color: var(--muted);
+        font-size: 10px;
+      }
+      .days {
+        display: flex;
+        gap: 5px;
+      }
+      .day {
+        width: 34px;
+        height: 34px;
+        padding: 0;
+        border-radius: 50%;
+      }
+      .day.done {
+        background: var(--a);
+      }
+      .habit-dashboard {display:grid;grid-template-columns:1.35fr .65fr;gap:13px}
+      .habit-metrics {display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+      .habit-metrics article {padding:14px;border:1px solid var(--line);border-radius:12px;background:#090f1d}
+      .habit-metrics b,.habit-metrics span {display:block}.habit-metrics b{font-size:24px}.habit-metrics span{font-size:9px;color:var(--muted)}
+      .habit-card {padding:14px;border:1px solid var(--line);border-radius:13px;background:#0a1020;margin:8px 0}
+      .habit-card .week {display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:12px}
+      .habit-card .week button {padding:8px 2px;font-size:9px}.habit-card .week button.done{background:var(--habit)}
+      .progress-track{height:6px;border-radius:99px;background:#050a13;overflow:hidden;margin-top:8px}.progress-track span{display:block;height:100%;background:var(--habit);width:0}
+      .coach-chat{display:grid;gap:8px}.coach-messages{max-height:330px;overflow:auto;display:grid;gap:7px}.bubble{padding:10px;border-radius:12px;background:#090f1d;color:#c8d1e1;font-size:11px;line-height:1.5}.bubble.user{background:#2a1d48;margin-left:20px}.coach-actions{display:flex;gap:6px}.coach-actions input{min-width:0;flex:1}
+      .enhanced-add{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:7px;margin-bottom:12px}
+      @media (max-width: 620px) {
+        .add {
+          grid-template-columns: 1fr;
+        }
+        .habit {
+          grid-template-columns: 1fr;
+        }
+        .days {
+          overflow: auto;
+        }
+        .habit-dashboard{grid-template-columns:1fr}.habit-metrics{grid-template-columns:1fr 1fr}.enhanced-add{grid-template-columns:1fr}
+      }
